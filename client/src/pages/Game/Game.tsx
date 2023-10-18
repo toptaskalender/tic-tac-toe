@@ -14,8 +14,11 @@ import dispatchToast from '@helpers/dispatchToast';
 
 import sleep from '@utils/sleep';
 
+import { socket } from '../../socket';
 import { initializeBoard } from './Game.helpers';
 import gameReducer from './Game.reducer';
+
+socket;
 
 function Game() {
   const [game, dispatch] = React.useReducer(gameReducer, {
@@ -37,9 +40,7 @@ function Game() {
     async function endWonGame() {
       dispatchToast({ type: 'win' });
 
-      const start = performance.now();
       await sleep(GAME_CONFIGS.WON_SCREEN_DURATION_SECONDS);
-      console.log('dif ', performance.now() - start);
       _resetGame();
     }
   }, [game.status, game.player]);
@@ -91,14 +92,3 @@ function Game() {
 }
 
 export default Game;
-
-/* 
-
- layout
-      transition={{
-        type: 'spring',
-        stiffness: 300,
-        damping: 60,
-      }}
-      
-      */

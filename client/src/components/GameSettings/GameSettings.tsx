@@ -24,9 +24,7 @@ function GameSettings({
       <div className='relative flex flex-col gap-2'>
         <h2 className='relative text-center font-semibold'>
           Game Settings
-          <span className='absolute right-0 text-sm font-medium'>
-            v{import.meta.env.VITE_REACT_APP_VERSION}
-          </span>
+          <span className='absolute right-0 text-sm font-medium'>v0.0.1</span>
         </h2>
         <p className='flex items-center gap-2 rounded border border-blue-100 bg-blue-50 p-2 leading-tight'>
           <Info
