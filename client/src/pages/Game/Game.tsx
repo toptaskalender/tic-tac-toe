@@ -25,7 +25,17 @@ function Game() {
     board: initializeBoard(GAME_CONFIGS.DEFAULT_BOARD_SIZE),
   });
 
-  socket;
+  React.useEffect(() => {
+    socket.on('connect', () => {
+      alert('connected');
+    });
+
+    socket.connect();
+
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
 
   /**
    * ! - TODO -
