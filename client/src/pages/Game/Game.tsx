@@ -18,14 +18,14 @@ import { socket } from '../../socket';
 import { initializeBoard } from './Game.helpers';
 import gameReducer from './Game.reducer';
 
-socket;
-
 function Game() {
   const [game, dispatch] = React.useReducer(gameReducer, {
     status: GAME_STATUSES.uninitialized,
     player: PLAYERS.X,
     board: initializeBoard(GAME_CONFIGS.DEFAULT_BOARD_SIZE),
   });
+
+  socket;
 
   /**
    * ! - TODO -

@@ -13,8 +13,8 @@ const io = new Server(server, {
   },
 });
 
-app.get("/api", (req, res) => {
-  res.send("<h1>Hi</h1>");
+app.get("", (req, res) => {
+  res.json({ status: "ok" });
 });
 
 io.on("connection", (socket) => {
