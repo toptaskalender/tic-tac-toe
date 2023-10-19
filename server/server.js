@@ -13,14 +13,14 @@ const io = new Server(server, {
   },
 });
 
-app.get("/api", (req, res) => {
+app.get("", (_req, res) => {
   res.json({ status: "ok" });
 });
 
-io.on("connection", (socket) => {
+io.on("connection", (_socket) => {
   console.log("a user connected");
 });
 
 server.listen(CONFIGS.PORT, () => {
-  console.log("server running at http://localhost:3000");
+  console.log(`server running at http://localhost:${CONFIGS.PORT}`);
 });
