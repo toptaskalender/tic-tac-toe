@@ -23,6 +23,7 @@
     /* Importing via alias */
     "baseUrl": ".",
     "paths": {
+      "@*": ["src/*"],
       "@pages/*": ["src/pages/*"],
       "@constants/*": ["src/constants/*"],
       "@components/*": ["src/components/*"],

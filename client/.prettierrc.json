@@ -19,6 +19,7 @@
   "embeddedLanguageFormatting": "auto",
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
     "^@pages/(.*)$",
     "^@constants/(.*)$",
     "^@components/(.*)$",

@@ -6,6 +6,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   resolve: {
     alias: {
+      '@': path.resolve(__dirname, './src'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@constants': path.resolve(__dirname, './src/constants'),
       '@components': path.resolve(__dirname, './src/components'),
